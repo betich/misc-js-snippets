@@ -21,18 +21,3 @@ getPropertyFromArray(
   },
   ["a", "b", "c"]
 );
-
-// proof of concept
-const obj = {
-  a: {
-    b: {
-      c: {
-        d: "something",
-      },
-    },
-  },
-};
-
-const query = ["a", "b", "c"];
-
-query.reduce((acc, curr) => acc[curr], obj)["d"]; // something
