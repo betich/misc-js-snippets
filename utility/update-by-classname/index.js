@@ -1,6 +1,11 @@
 // Update Elements by Classname
 // Update the style all elements with a class name
 
+/**
+ * Updates all DOM elements that contain a specified class
+ * @param {String} name The classname used to select the elements
+ * @returns {Proxy} The Object used as a setter
+ */
 const updateByClassName = (name) => {
   const selection = document.getElementsByClassName(name);
   if (!selection) return null;

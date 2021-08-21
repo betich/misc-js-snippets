@@ -1,6 +1,12 @@
 // Color Contrast
 // Find a color that contrast with a given color
 
+/**
+ * Inverts the color with an option for black and white colors
+ * @param hex The color code used to generate this color
+ * @param bw Generate a grey color?
+ * @returns {String} The Hex Code of the new color
+ */
 function invertColor(hex: string, bw: boolean) {
   // https://stackoverflow.com/questions/35969656/how-can-i-generate-the-opposite-color-according-to-current-color
   if (hex.indexOf("#") === 0) {
@@ -31,6 +37,11 @@ function invertColor(hex: string, bw: boolean) {
   return "#" + String(r).padStart(2, "0") + String(g).padStart(2, "0") + String(b).padStart(2, "0");
 }
 
+/**
+ * Basic dark/light color system
+ * @param color The color code used to generate this color
+ * @returns {Number} The Theme number (1 for light, 2 for dark)
+ */
 function getColorTheme(color: string) {
   const colorCode =
     color.length === 3
@@ -50,6 +61,11 @@ function getColorTheme(color: string) {
   }
 }
 
+/**
+ * A slightly more dark/light color system with using hsl
+ * @param color The color code used to generate this color
+ * @returns {String} The Hex Code of the new color
+ */
 function getContrastColor(color: string) {
   // mai take on contrasts: convert to hsl and manipulate it lol
   const hex =
