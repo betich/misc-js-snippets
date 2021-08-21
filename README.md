@@ -1,6 +1,6 @@
 # Miscellaneous JavaScript Projects
 
-sum miscellaneous code i think might be useful in the future
+A collection of some miscellaneous code that I think might be useful in the future. :p
 
 ## Utility
 
