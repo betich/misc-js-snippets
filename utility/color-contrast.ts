@@ -1,3 +1,6 @@
+// Color Contrast
+// Find a color that contrast with a given color
+
 function invertColor(hex: string, bw: boolean) {
 	// https://stackoverflow.com/questions/35969656/how-can-i-generate-the-opposite-color-according-to-current-color
 	if (hex.indexOf("#") === 0) {
