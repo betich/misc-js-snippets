@@ -6,7 +6,7 @@
  * @param {String} name The classname used to select the elements
  * @returns {Proxy} The Object used as a setter
  */
-const updateByClassName = (name) => {
+const $c = (name) => {
   const selection = document.getElementsByClassName(name);
   if (!selection) return null;
   return new Proxy(
@@ -42,5 +42,5 @@ const updateByClassName = (name) => {
   );
 };
 
-updateByClassName("button").innerHTML = "selected";
-updateByClassName("button").style.padding = "16px";
+$c("button").innerHTML = "selected";
+$c("button").style.padding = "16px";
